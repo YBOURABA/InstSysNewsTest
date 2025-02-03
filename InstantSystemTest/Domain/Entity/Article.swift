@@ -8,7 +8,8 @@
 import Foundation
 
 // Identifiable is required for SwiftUI ForEach.
-struct Article: Identifiable {
+// Equatable is required for Tests
+struct Article: Identifiable, Equatable {
     var id: String {
         return title + publishedAt.detailedFormatString
     }
